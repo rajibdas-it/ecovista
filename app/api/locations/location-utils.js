@@ -38,7 +38,7 @@ export const getLocations = () => {
 export const getLocationByName = (location) => {
     if (!location) return null
 
-    const found = data.map((loc) => loc.name === location)
+    const found = data.find((item) => item.location.toLowerCase() === location.toLowerCase())
 
     return found || {}
 }
