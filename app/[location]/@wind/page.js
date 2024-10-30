@@ -1,10 +1,13 @@
+import WindComponent from '@/components/WindComponent';
 import React from 'react';
 
-const WindPage = () => {
+const WindPage = ({
+    params: { location },
+    searchParams: { latitude, longitude },
+}) => {
+
     return (
-        <div>
-            WindPage
-        </div>
+        <WindComponent lat={latitude} lon={longitude} />
     );
 };
 
