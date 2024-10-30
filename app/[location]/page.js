@@ -1,10 +1,9 @@
+import LocationInfo from '@/components/LocationInfo';
 import React from 'react';
 
-const LocationHomePage = () => {
+const LocationHomePage = ({ params: { location }, searchParams: { latitude, longitude } }) => {
     return (
-        <div>
-            <p> Location er home page</p>
-        </div>
+        <LocationInfo lat={latitude} lon={longitude} />
     );
 };
 
