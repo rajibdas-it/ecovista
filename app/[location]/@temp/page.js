@@ -1,10 +1,10 @@
+import TempComponent from '@/components/TempComponent';
 import React from 'react';
 
-const TemperaturePage = () => {
+const TemperaturePage = ({ params: { location }, searchParams: { latitude, longitude } }) => {
+
     return (
-        <div>
-            Temperature Page
-        </div>
+        <TempComponent lat={latitude} lon={longitude} />
     );
 };
 
