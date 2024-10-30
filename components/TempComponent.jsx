@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./Card";
 import Image from "next/image";
-import { getWeatherData } from "@/lib/weather-info";
+import { getTempData } from "@/lib/weather-info";
 
 const TempComponent = async ({ lat, lon }) => {
-  const { temp, feels_like } = await getWeatherData(lat, lon);
+  const { temp, feels_like } = await getTempData(lat, lon);
   return (
     <Card>
       <div className="card">
@@ -14,8 +14,8 @@ const TempComponent = async ({ lat, lon }) => {
             className="max-w-20"
             src="/icon_tempareture.png"
             alt="rain icon"
-            width={20}
-            height={20}
+            width={50}
+            height={50}
           />
           <h3 className="feature-title">{temp}°C</h3>
 
