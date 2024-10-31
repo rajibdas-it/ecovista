@@ -3,7 +3,7 @@ import WindComponent from '@/components/WindComponent';
 import { getResolvedLatLong } from '@/lib/location-info';
 import React from 'react';
 
-const WindPageNew = async ({ params: { location }, searchParams: { latitude, longitude } }) => {
+const WindPage = async ({ params: { location }, searchParams: { latitude, longitude } }) => {
 
     const resolved = await getResolvedLatLong(location, latitude, longitude)
 
@@ -14,4 +14,4 @@ const WindPageNew = async ({ params: { location }, searchParams: { latitude, lon
     }
 };
 
-export default WindPageNew;
+export default WindPage;
