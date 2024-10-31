@@ -11,7 +11,7 @@ const AQIPage = async ({ params: { location }, searchParams: { latitude, longitu
     if (resolved?.lat && resolved?.lon) {
         return <AQIComponent lat={resolved?.lat} lon={resolved?.lon} />
     } else {
-        <NoLocationInfo />
+        return <NoLocationInfo />
     }
 };
 
